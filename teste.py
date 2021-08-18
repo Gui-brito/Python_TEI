@@ -7,3 +7,7 @@ print(nome)
 nome = 99
 print(type(nome))
 print(nome)
+
+a = True
+b = False
+print(a or b)
