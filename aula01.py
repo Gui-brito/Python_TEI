@@ -22,8 +22,9 @@ altura_imc = float(input("Qual é a sua altura? em metros"))
 peso_imc = float(input("Qual é o seu peso? Em kg "))
 
 aux = altura_imc*altura_imc
-print(aux)
+
 imc = (peso_imc/aux)
+print(imc)
 
 print("Fiz as contas aqui e o seu IMC é %.2f\n\n" %imc)
 if(imc < 18.5):
