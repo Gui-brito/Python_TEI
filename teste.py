@@ -18,6 +18,6 @@ nome = 99
 print(type(nome))
 print(nome)
 
-a = true
-b = false
+a = True
+b = False
 print(a or b)
