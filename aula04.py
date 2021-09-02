@@ -1,4 +1,7 @@
 import os
+import json
+import requests
+
 os.system('cls')
 
 # lista1 = [1,2,3,'vish',['nome','Guilherme']]
@@ -40,3 +43,31 @@ numeros = [1,2,3]
 
 prod_cart = [(let,num) for let in letras for num in numeros]
 exibir(prod_cart)
+
+url = 'https://parallelum.com.br/fipe/api/v1/carros/marcas'
+header = {"User-Agent":"Chrome"}
+
+# data = {}
+# data['sp'] = "São Paulo"
+# data['rj'] = "Rio de Janeiro"
+# data["mg"] = "Minas Gerais"
+# data["vermelho"] = {"nome":"Vermelho", "rgb":"255,0,0", "hex":"#FFFF00"}
+# data["verde"] = {"nome":"Verde", "rgb":"0,255,0", "hex":"#00FF00"}
+# data["azul"] = {"nome":"Azul", "rgb":"0,0,255", "hex":"#0000FF"}
+data = requests.get(url = url, headers=header)
+
+for linha in data.json():
+    print(linha['codigo'] + '\t ' + linha['nome'])
+
+
+#escrever formato JSON
+# f = open("output.json","w")
+# json.dump(data,f,sort_keys=True, indent=4)
+# f.close()
+
+# #ler formato JSON
+# f = open("output.json","r")
+# data = json.load(f)
+# f.close()
+
+# print(data.json())
