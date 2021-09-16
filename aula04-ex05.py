@@ -7,7 +7,7 @@ for i in f:
 g = open("output.json","w")
 
 #escrever formato JSON
-json.dump(lista,g,sort_keys=True, indent=3)
+json.dump(lista,g,sort_keys=True)
 f.close()
 g.close()
 
