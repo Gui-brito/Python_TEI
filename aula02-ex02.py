@@ -22,14 +22,13 @@ def resistencia_total(valores):
         total += i
     return total
 
-
 def input_inicial():
     valores = []
     for i in range(4):
         ele = float(input("Insira o valor da resistencia {0}: ".format(i+1)))
         valores.append(ele)
         os.system('cls')    
-
+    print("Os valores informados foram:\n", valores)
     print("O maior valor das resistencias é {0}\nO menor é {1}\nE a resistencia equivalente desse circuito é {2}".format(float(maior(valores)), float(menor(valores)), float(resistencia_total(valores))))
     
 input_inicial()

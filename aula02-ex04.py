@@ -10,10 +10,12 @@ Exercicio 4
 • For year = 1700, the output should be centuryFromYear(year) = 17
 """
 
-valor = int (input("Entre com o ano :"))
-result = valor /100
-if (result > int(valor /100) ):
-    result = result + 1
-    print ("Século = %.0f" %result)
-else:    
-    print ("Século = %.0f" %result)
+def centuryFromYear(year):
+    century = year /100
+    if (century > int(year /100) ):
+        century = century + 1
+        print ("Século = %.0f" %century)
+    else:    
+        print ("Século = %.0f" %century)
+
+centuryFromYear(int(input("Entre com o ano :")))
